@@ -8,15 +8,7 @@ import com.ramonbarros.musicapp.repository.LoginRepository
 class LoginInteractor {
     val repo = LoginRepository()
 
-    suspend fun login(data: LoginData): LoginResult {
-        var result = treatInputData(data)
-        if (result.error == "") {
-            result = repo.loginToFirebase(data)
-        }
-        return result
-    }
-
-    fun treatInputData(data: LoginData): LoginResult {
+    suspend fun treatInputData(data: LoginData): LoginResult {
         val result = LoginResult()
 
         if (data.email.isBlank()) {
@@ -34,7 +26,7 @@ class LoginInteractor {
             return result
         }
 
-        if (data.password.length > 15) {
+        if (data.email.length > 15) {
             result.error = "EMAIL MAXIMUM LENGTH"
             return result
         }
@@ -43,7 +35,8 @@ class LoginInteractor {
             result.error = "EMAIL INVALID"
             return result
         }
-        return result
+
+        return repo.loginToFirebase(data)
     }
 
     fun isEmailValid(email: String): Boolean {

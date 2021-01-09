@@ -21,7 +21,6 @@
     <string name="passwordMinimumLimit">A senha deve conter ao menos 6 caracteres.</string>
     <string name="passwordMaximumLimit">A senha não deve conter mais que 15 caracteres.</string>
     <string name="invalidEmail">O e-mail inserido é inválido.</string>
-    <string name="incorrectAuth">Senha incorreta ou conta não existente.</string>
 
 
 
