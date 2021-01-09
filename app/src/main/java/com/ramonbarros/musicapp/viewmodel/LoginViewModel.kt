@@ -22,7 +22,7 @@ class LoginViewModel(val app: Application): AndroidViewModel(app), CoroutineScop
     fun login(data: LoginData, ctx: Context){
 
         launch {
-            val result = interactor.treatInputData(data) //treatment of input data
+            val result = interactor.login(data) //treatment of input data
             if (result.error != ""){
                 result.error = screenTextError(ctx, result.error)
 
@@ -38,9 +38,13 @@ class LoginViewModel(val app: Application): AndroidViewModel(app), CoroutineScop
         val errTxt: String = when (err) {
             "EMPTY EMAIL" -> ctx.getString(R.string.emptyEmail)
             "EMPTY PASSWORD" -> ctx.getString(R.string.emptyPassword)
-            "PASS MINIMUM LENGTH" -> ctx.getString(R.string.passwordMinimumLimit)
-            "PASS MAXIMUM LENGTH" -> ctx.getString(R.string.passwordMaximumLimit)
+            "PASSWORD MINIMUM LENGTH" -> ctx.getString(R.string.passwordMinimumLimit)
+            "PASSWORD MAXIMUM LENGTH" -> ctx.getString(R.string.passwordMaximumLimit)
             "EMAIL INVALID" -> ctx.getString(R.string.invalidEmail)
+            "com.google.firebase.auth.FirebaseAuthInvalidCredentialsException: " +
+                    "The password is invalid or the user does not have a password." -> ctx.getString(R.string.incorrectAuth)
+            "com.google.firebase.auth.FirebaseAuthInvalidUserException: " +
+                    "There is no user record corresponding to this identifier. The user may have been deleted." -> ctx.getString(R.string.incorrectAuth)
             else -> err
         }
         return errTxt
