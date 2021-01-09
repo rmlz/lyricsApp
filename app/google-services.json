@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "956545276498",
+    "project_id": "my-lirics-app",
+    "storage_bucket": "my-lirics-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:956545276498:android:88923ca156f40c0ce51d8b",
+        "android_client_info": {
+          "package_name": "com.ramonbarros.musicapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "956545276498-f2q3gllf2n8lahvnps9g42rgtl2p54ec.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUSuq9LibNtadNFtY3KlYAOhjW7duPXAM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "956545276498-f2q3gllf2n8lahvnps9g42rgtl2p54ec.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:956545276498:android:745cb4193ca1b700e51d8b",
+        "android_client_info": {
+          "package_name": "com.ramonbarros.mylyricsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "956545276498-f2q3gllf2n8lahvnps9g42rgtl2p54ec.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUSuq9LibNtadNFtY3KlYAOhjW7duPXAM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "956545276498-f2q3gllf2n8lahvnps9g42rgtl2p54ec.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

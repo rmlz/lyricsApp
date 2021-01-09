@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">AmusicLyrics</string>
+    <!-- FRAGMENTS -->
+    <!-- LOGIN FRAGMENT -->
+    <string name="loginButton">Entrar</string>
+    <string name="registerButton">Quero me registrar!</string>
+    <string name="forgotPassButton">Esqueci minha senha!</string>
+    <string name="emailHint">E-mail</string>
+    <string name="passwordHint">Senha</string>
+    <string name="madeBy">Esse aplicativo foi desenvolvido por Ramon Barros</string>
+    <string name="logoContentDesc">Imagem, Logomarca do AmusicLyrics</string>
+
+
+    <!-- SUCCESS AND ERRORS -->
+
+    <!-- LOGIN SUCCESS MESSAGES -->
+    <string name="connectionStabilished">Conexão Estabelecida!</string>
+    <!-- LOGIN ERROR MESSAGES -->
+    <string name="emptyEmail">O email é obrigatório.</string>
+    <string name="emptyPassword">A senha é obrigatória</string>
+    <string name="passwordMinimumLimit">A senha deve conter ao menos 6 caracteres.</string>
+    <string name="passwordMaximumLimit">A senha não deve conter mais que 15 caracteres.</string>
+    <string name="invalidEmail">O e-mail inserido é inválido.</string>
+
+
+
+<!--    <string name=""></string>-->
+<!--    <string name=""></string>-->
+<!--    <string name=""></string>-->
+<!--    <string name=""></string>-->
+<!--    <string name=""></string>-->
+<!--    <string name=""></string>-->
+<!--    <string name=""></string>-->
+<!--    <string name=""></string>-->
+<!--    <string name=""></string>-->
+<!--    <string name=""></string>-->
+<!--    <string name=""></string>-->
+<!--    <string name=""></string>-->
+<!--    <string name=""></string>-->
+<!--    <string name=""></string>-->
+<!--    <string name=""></string>-->
+<!--    <string name=""></string>-->
+<!--    <string name=""></string>-->
+<!--    <string name=""></string>-->
+</resources>
