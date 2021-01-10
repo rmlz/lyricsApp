@@ -51,8 +51,7 @@ class LoginInteractor {
             result.error = "EMAIL INVALID"
             return result
         }
-
-        return repo.loginToFirebase(data)
+        return result
     }
 
     fun isEmailValid(email: String): Boolean {

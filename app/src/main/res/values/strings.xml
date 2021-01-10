@@ -15,6 +15,10 @@
     <string name="entryRegisterButton">Cadastrar</string>
     <string name="register">Crie uma conta agora!</string>
 
+    <!--SEARCH FRAGMENT -->
+    <string name="searchButton">Buscar música</string>
+    <string name="searchYourSong">Busque sua música favorita!</string>
+
     <!-- SUCCESS AND ERRORS -->
 
     <!-- LOGIN SUCCESS MESSAGES -->

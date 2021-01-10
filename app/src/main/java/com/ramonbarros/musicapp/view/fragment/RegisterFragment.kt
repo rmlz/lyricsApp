@@ -45,6 +45,7 @@ class RegisterFragment : Fragment() {
             return
         }
         Toast.makeText(context, R.string.accountCreated, Toast.LENGTH_LONG).show()
+        navController.navigate(R.id.action_registerFragment_to_musicSearchFragment)
     }
 
     override fun onAttach(context: Context) {

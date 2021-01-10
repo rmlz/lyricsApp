@@ -51,6 +51,7 @@ class LoginFragment : Fragment() {
             return
         }
         Toast.makeText(context, R.string.connectionStabilished, Toast.LENGTH_LONG).show()
+        navController.navigate(R.id.action_loginFragment_to_musicSearchFragment)
     }
 
     fun login(){
