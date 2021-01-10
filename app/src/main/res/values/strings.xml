@@ -13,7 +13,7 @@
 
     <!-- REGISTER FRAGMENT -->
     <string name="entryRegisterButton">Cadastrar</string>
-    <string name="register">Crie uma conta agora!</string>
+    <string name="register">Crie sua conta agora!</string>
 
     <!--SEARCH FRAGMENT -->
     <string name="searchButton">Buscar música</string>
