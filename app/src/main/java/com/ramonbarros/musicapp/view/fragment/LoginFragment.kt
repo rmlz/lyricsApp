@@ -29,10 +29,10 @@ class LoginFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        navController = findNavController()
         binding = FragmentLoginBinding.inflate(inflater, container, false)
         binding.loginFragment = this
         binding.lifecycleOwner = this
+        navController = findNavController()
         viewModel.screenResult.observe(viewLifecycleOwner) { loginResult ->
             proccessLoginResult(loginResult)
         }
@@ -60,10 +60,10 @@ class LoginFragment : Fragment() {
 
         viewModel.login(data, ctx)
 
-
     }
 
-    fun register(){
+    fun navToRegister(){
+        navController.navigate(R.id.action_loginFragment_to_registerFragment)
 
     }
 }

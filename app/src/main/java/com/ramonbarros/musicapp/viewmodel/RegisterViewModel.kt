@@ -12,17 +12,16 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class LoginViewModel(val app: Application): AndroidViewModel(app), CoroutineScope {
+class RegisterViewModel(val app: Application): AndroidViewModel(app), CoroutineScope {
 
     override val coroutineContext = Dispatchers.Main
-    private val interactor = LoginInteractor()
-
     val screenResult = MutableLiveData<LoginResult>()
+    val interactor = LoginInteractor()
 
-    fun login(data: LoginData, ctx: Context){
+    fun register(data: LoginData, ctx: Context) {
 
         launch {
-            val result = interactor.login(data) // starts treatment of input data
+            val result = interactor.register(data) // starts treatment of input data
             if (result.error != ""){
                 result.error = screenTextError(ctx, result.error)
 
@@ -41,12 +40,10 @@ class LoginViewModel(val app: Application): AndroidViewModel(app), CoroutineScop
             "PASSWORD MINIMUM LENGTH" -> ctx.getString(R.string.passwordMinimumLimit)
             "PASSWORD MAXIMUM LENGTH" -> ctx.getString(R.string.passwordMaximumLimit)
             "EMAIL INVALID" -> ctx.getString(R.string.invalidEmail)
-            "com.google.firebase.auth.FirebaseAuthInvalidCredentialsException: " +
-                    "The password is invalid or the user does not have a password." -> ctx.getString(R.string.incorrectAuth)
-            "com.google.firebase.auth.FirebaseAuthInvalidUserException: " +
-                    "There is no user record corresponding to this identifier. The user may have been deleted." -> ctx.getString(R.string.incorrectAuth)
+
             else -> err
         }
         return errTxt
     }
+
 }

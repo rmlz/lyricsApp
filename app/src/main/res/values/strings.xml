@@ -9,7 +9,11 @@
     <string name="passwordHint">Senha</string>
     <string name="madeBy">Esse aplicativo foi desenvolvido por Ramon Barros</string>
     <string name="logoContentDesc">Imagem, Logomarca do AmusicLyrics</string>
+    <string name="login">Acesse a sua conta!</string>
 
+    <!-- REGISTER FRAGMENT -->
+    <string name="entryRegisterButton">Cadastrar</string>
+    <string name="register">Crie uma conta agora!</string>
 
     <!-- SUCCESS AND ERRORS -->
 
@@ -22,25 +26,30 @@
     <string name="passwordMaximumLimit">A senha não deve conter mais que 15 caracteres.</string>
     <string name="invalidEmail">O e-mail inserido é inválido.</string>
     <string name="incorrectAuth">Senha incorreta ou conta não existente.</string>
+    <!-- REGISTER SUCCESS MESSAGES -->
+    <string name="accountCreated">Sua conta foi criada com sucesso!</string>
 
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
-<!--    <string name=""></string>-->
-<!--    <string name=""></string>-->
-<!--    <string name=""></string>-->
-<!--    <string name=""></string>-->
-<!--    <string name=""></string>-->
-<!--    <string name=""></string>-->
-<!--    <string name=""></string>-->
-<!--    <string name=""></string>-->
-<!--    <string name=""></string>-->
-<!--    <string name=""></string>-->
-<!--    <string name=""></string>-->
-<!--    <string name=""></string>-->
-<!--    <string name=""></string>-->
-<!--    <string name=""></string>-->
-<!--    <string name=""></string>-->
-<!--    <string name=""></string>-->
-<!--    <string name=""></string>-->
-<!--    <string name=""></string>-->
+
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
 </resources>
