@@ -15,18 +15,19 @@
     android:layout_height="match_parent"
     tools:context=".view.fragment.RegisterFragment">
 
-    <ImageView
-        android:id="@+id/ivLogoRegister"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:contentDescription="@string/logoContentDesc"
-        app:layout_constraintBottom_toTopOf="@+id/etEmailRegister"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:src="@tools:sample/avatars" />
+        <ImageView
+            android:id="@+id/ivLogoRegister"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/logoContentDesc"
+            app:layout_constraintBottom_toTopOf="@+id/etEmailRegister"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/amuselyrics"
+            tools:src="@drawable/amuselyrics" />
 
     <EditText
         android:id="@+id/etEmailRegister"

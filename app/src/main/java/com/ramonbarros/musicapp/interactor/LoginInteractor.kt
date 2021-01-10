@@ -24,6 +24,14 @@ class LoginInteractor {
         return result
     }
 
+    suspend fun resetPassword(data: LoginData): LoginResult {
+        var result = treatInputData(data)
+        if (result.error == "") {
+            result = repo.resetPassFirebase(data)
+        }
+        return result
+    }
+
     fun treatInputData(data: LoginData): LoginResult {
         val result = LoginResult()
 
@@ -42,8 +50,8 @@ class LoginInteractor {
             return result
         }
 
-        if (data.email.length > 15) {
-            result.error = "EMAIL MAXIMUM LENGTH"
+        if (data.password.length > 15) {
+            result.error = "PASSWORD MAXIMUM LENGTH"
             return result
         }
 

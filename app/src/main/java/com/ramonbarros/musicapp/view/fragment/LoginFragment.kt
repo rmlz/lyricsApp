@@ -67,4 +67,8 @@ class LoginFragment : Fragment() {
         navController.navigate(R.id.action_loginFragment_to_registerFragment)
 
     }
+
+    fun navToForgotPass(){
+        navController.navigate(R.id.action_loginFragment_to_forgotPasswordFragment)
+    }
 }

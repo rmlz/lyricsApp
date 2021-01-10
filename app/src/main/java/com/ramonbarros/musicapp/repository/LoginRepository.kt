@@ -34,10 +34,26 @@ class LoginRepository {
                 Log.w(TAG, "signInWithEmail:failure", result.exception)
                 registerResult.error = result.exception.toString()
             }
+            it.resume(registerResult)
         }
 
+    }
 
-
-        it.resume(registerResult)
+    suspend fun resetPassFirebase(data: LoginData): LoginResult = suspendCoroutine {
+        val registerResult = LoginResult()
+        val firebaseAuth = FirebaseAuth.getInstance()
+        val operation = firebaseAuth.sendPasswordResetEmail(data.email)
+        operation.addOnCompleteListener { result ->
+            Log.w(TAG, "isResetSuccessful" + result.isSuccessful.toString())
+            if (result.isSuccessful) {
+                Log.w("SUCESSO SENHA", result.result.toString())
+                registerResult.result = "LOGIN_FIREBASE_SUCCESS"
+            } else {
+                Log.w(TAG, "resetPassword:failure", result.exception)
+                registerResult.error = result.exception.toString()
+                Log.w(TAG, "resetPassword:failure" + registerResult.error)
+            }
+            it.resume(registerResult)
+        }
     }
 }

@@ -18,6 +18,12 @@
     <!--SEARCH FRAGMENT -->
     <string name="searchButton">Buscar música</string>
     <string name="searchYourSong">Busque sua música favorita!</string>
+    <string name="findMusicHint">Digite aqui aquela música que dói!</string>
+
+    <!-- FORGOT PASSWORD FRAGMENT -->
+        <string name="forgotPassword">Esqueceu sua senha?</string>
+        <string name="insertYourRegisteredEmail">Insira seu e-mail cadastrado.</string>
+        <string name="entryForgotButton">Resetar Senha</string>
 
     <!-- SUCCESS AND ERRORS -->
 
@@ -32,16 +38,17 @@
     <string name="incorrectAuth">Senha incorreta ou conta não existente.</string>
     <!-- REGISTER SUCCESS MESSAGES -->
     <string name="accountCreated">Sua conta foi criada com sucesso!</string>
+    <!-- REGISTER ERROR MESSAGES -->
 
+    <!-- RESETPASS SUCCESS MESSAGES -->
 
+    <!-- RESETPASS ERROR MESSAGES -->
+        <string name="passwordReset">SUCESSO! Veja a sua caixa de entrada para finalizar o processo de reabilitação da senha.</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
-    <!--    <string name=""></string>-->
-    <!--    <string name=""></string>-->
-    <!--    <string name=""></string>-->
-    <!--    <string name=""></string>-->
+
     <!--    <string name=""></string>-->
     <!--    <string name=""></string>-->
     <!--    <string name=""></string>-->

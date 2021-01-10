@@ -26,7 +26,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@tools:sample/avatars" />
+            app:srcCompat="@drawable/amuselyrics"
+            tools:src="@drawable/amuselyrics" />
 
         <EditText
             android:id="@+id/etEmailLogin"
@@ -84,6 +85,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:text="@string/forgotPassButton"
+            android:onClick="@{ () -> loginFragment.navToForgotPass()}"
             android:textAlignment="center"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
