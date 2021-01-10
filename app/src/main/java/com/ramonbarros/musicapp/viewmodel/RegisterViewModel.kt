@@ -12,17 +12,16 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class LoginViewModel(val app: Application): AndroidViewModel(app), CoroutineScope {
+class RegisterViewModel(val app: Application): AndroidViewModel(app), CoroutineScope {
 
     override val coroutineContext = Dispatchers.Main
-    private val interactor = LoginInteractor()
-
     val screenResult = MutableLiveData<LoginResult>()
+    val interactor = LoginInteractor()
 
-    fun login(data: LoginData, ctx: Context){
+    fun register(data: LoginData, ctx: Context) {
 
         launch {
-            val result = interactor.login(data) // starts treatment of input data
+            val result = interactor.register(data) // starts treatment of input data
             if (result.error != ""){
                 result.error = screenTextError(ctx, result.error)
 
@@ -38,11 +37,13 @@ class LoginViewModel(val app: Application): AndroidViewModel(app), CoroutineScop
         val errTxt: String = when (err) {
             "EMPTY EMAIL" -> ctx.getString(R.string.emptyEmail)
             "EMPTY PASSWORD" -> ctx.getString(R.string.emptyPassword)
-            "PASS MINIMUM LENGTH" -> ctx.getString(R.string.passwordMinimumLimit)
-            "PASS MAXIMUM LENGTH" -> ctx.getString(R.string.passwordMaximumLimit)
+            "PASSWORD MINIMUM LENGTH" -> ctx.getString(R.string.passwordMinimumLimit)
+            "PASSWORD MAXIMUM LENGTH" -> ctx.getString(R.string.passwordMaximumLimit)
             "EMAIL INVALID" -> ctx.getString(R.string.invalidEmail)
+
             else -> err
         }
         return errTxt
     }
+
 }

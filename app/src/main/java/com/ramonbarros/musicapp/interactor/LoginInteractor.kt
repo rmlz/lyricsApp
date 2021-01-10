@@ -8,7 +8,23 @@ import com.ramonbarros.musicapp.repository.LoginRepository
 class LoginInteractor {
     val repo = LoginRepository()
 
-    suspend fun treatInputData(data: LoginData): LoginResult {
+    suspend fun login(data: LoginData): LoginResult {
+        var result = treatInputData(data)
+        if (result.error == "") {
+            result = repo.loginToFirebase(data)
+        }
+        return result
+    }
+
+    suspend fun register(data: LoginData): LoginResult {
+        var result = treatInputData(data)
+        if (result.error == "") {
+            result = repo.registerToFirebase(data)
+        }
+        return result
+    }
+
+    fun treatInputData(data: LoginData): LoginResult {
         val result = LoginResult()
 
         if (data.email.isBlank()) {

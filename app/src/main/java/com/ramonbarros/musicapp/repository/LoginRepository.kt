@@ -23,4 +23,21 @@ class LoginRepository {
             it.resume(loginResult) // resume is the return of suspend functions
         }
     }
+    suspend fun registerToFirebase(data: LoginData): LoginResult = suspendCoroutine {
+        val registerResult = LoginResult()
+        val firebaseAuth = FirebaseAuth.getInstance()
+        val operation = firebaseAuth.createUserWithEmailAndPassword(data.email, data.password)
+        operation.addOnCompleteListener { result ->
+            if (result.isSuccessful) {
+                registerResult.result = "LOGIN_FIREBASE_SUCCESS"
+            } else {
+                Log.w(TAG, "signInWithEmail:failure", result.exception)
+                registerResult.error = result.exception.toString()
+            }
+        }
+
+
+
+        it.resume(registerResult)
+    }
 }
