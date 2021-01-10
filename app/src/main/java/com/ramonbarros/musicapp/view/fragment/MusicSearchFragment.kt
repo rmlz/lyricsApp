@@ -44,14 +44,8 @@ class MusicSearchFragment : Fragment() {
         }
         binding.rvMusics.layoutManager = LinearLayoutManager(context)
 
-        randomSearchHint()
-        return binding.root
-    }
 
-    fun randomSearchHint() {
-        musicList.addAll(listOf("I don't want to miss a thing", "Blinding Lights", "Don't Start Now"))
-        var randomNum: Int = (Math.round(Math.random() * musicList.size - 1)).toInt()
-        binding.etMusicSearch.hint = musicList[randomNum]
+        return binding.root
     }
 
     fun search(){
@@ -67,11 +61,6 @@ class MusicSearchFragment : Fragment() {
         }
         val adapter = AdapterMusic(list)
         binding.rvMusics.adapter = adapter
-    }
-
-    fun visit(url: String){
-        Log.w("TENTANDO MUDAR", "VAI!")
-
     }
 
 }

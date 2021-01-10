@@ -60,7 +60,10 @@ class MusicMatchRepository {
                 dto.track.track_name,
                 dto.track.album_name,
                 dto.track.artist_name,
-                dto.track.track_share_url
+                dto.track.track_share_url,
+                dto.track.restricted,
+                dto.track.has_lyrics,
+
             )
         }
 
